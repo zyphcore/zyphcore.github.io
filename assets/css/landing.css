@@ -1,0 +1,80 @@
+body {
+    background-color: #000;
+    font-family: "mc";
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@font-face {
+    font-family: "mc";
+    src: url("../fonts/regular.otf") format("opentype");
+}
+
+#enter {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    position: absolute;
+    transition: .3s ease-in;
+    font-size: 24px;
+}
+
+.landing {
+    text-align: center;
+}
+
+    .landing-logo {
+        width: 20em;
+    }
+
+    .landing a {
+        color: #fff;
+        text-decoration: none;
+        transition: ease-in-out .1s;
+    }
+
+    .landing a:hover {
+        color: #7700FF;
+        text-decoration: none;
+    }
+
+    .landing .archive {
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+
+/* Media query */
+@media (max-width: 1000px) {
+
+    #enter {
+        display: none;
+    }
+
+    .body {
+        width: 100%;
+    }
+
+    .landing {
+        width: 100%;
+    }
+
+    pre {
+        font-size: 9px;
+    }
+
+}
