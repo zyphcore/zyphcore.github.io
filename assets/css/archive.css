@@ -1,0 +1,236 @@
+body {
+    background-color: #000;
+    font-family: "pr";
+    color: #fff;
+}
+
+@font-face {
+    font-family: "mc";
+    src: url("../fonts/regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "pr";
+    src: url("../fonts/pr.ttf");
+}
+
+@font-face {
+    font-family: "psb";
+    src: url("../fonts/psb.ttf");
+}
+
+@font-face {
+    font-family: "pb";
+    src: url("../fonts/pb.ttf");
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+::-webkit-scrollbar-track {
+    background-color: rgb(15, 15, 15);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.archive-box {
+    margin: 0 auto;
+    padding: 2em 0 5em 0;
+}
+
+    .archive-box .top-wrap {
+        text-align: center;
+        margin-bottom: 5em;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+        .top-wrap img {
+            padding: 0!important;
+            height: 125px;
+            width: 125px;
+            padding: .5em 1em 1em 1em;
+            border-radius: 50%;
+            margin: 0 auto;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .top-wrap h1 {
+            margin: 0;
+            font-family: mc;
+            margin-top: .5em;
+        }
+
+    .archive-box .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+
+        .archive-box .item {
+            background-color: rgb(15, 15, 15);
+            flex: 0 20%;
+            align-items: center;
+            border-radius: 10px;
+            margin: 0 1em
+        }
+
+            .archive-box .item > .content {                
+                display: flex;
+                flex-direction: column;
+                padding: 1em;
+                min-height: 175px;
+                position: relative;
+            }
+
+                .archive-box .img-wrap {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                    .archive-box a {
+                        text-decoration: none;
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: #fff;
+                        transition: ease-in-out .1s;
+                        -webkit-touch-callout: none;
+                        -webkit-user-select: none;
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                    }
+
+                    .archive-box a:hover {
+                        color: #7700FF;
+                    }
+
+                    .archive-box .img-wrap > img {
+                        height: 125px;
+                        width: 125px;
+                        padding: .5em 1em 1em 1em;
+                        border-radius: 50%;
+                        margin: 0 auto;
+                        -webkit-touch-callout: none;
+                        -webkit-user-select: none;
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                    }
+
+                    .archive-box a#button {
+                        background-color: #fff;
+                        color: #000;
+                        border: none;
+                        font-size: 12px;
+                        width: 60px;
+                        margin: 0 auto;
+                        border-radius: 15px;
+                        padding: 8px 10px;
+                        font-family: "pr";
+                        -webkit-touch-callout: none;
+                        -webkit-user-select: none;
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        transition: .1s ease-in-out;
+                        line-height: 1;
+                        font-weight: 600;
+                    }
+
+                    .socials {
+                        margin: 2em 0 1em 0;
+                    }
+
+                        .socials a {
+                            width: 30px;
+                        }
+
+                        .socials a img {
+                            height: 30px;
+                            width: 30px;
+                            transition: .1s ease-in-out;
+                            margin: 0 .5em;
+                        }
+
+                        .socials a img:hover {
+                            transform: scale(1.1);
+                        }
+
+                        
+/* Media queries */
+
+@media (max-width: 1400px) {
+
+    .archive-box .img-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .archive-box .img-wrap img {
+            margin: 0 auto;
+        }
+
+        .archive-box .img-wrap button {
+            width: 100px;
+            margin: 0 auto;
+        }
+
+    .archive-box .item > .content {
+        flex-direction: column;
+    }
+
+        .archive-box .item p {
+            padding-right: 0px!important;
+        }
+
+    
+
+}
+
+@media (max-width: 1000px) {
+
+    .archive-box .row {
+        flex-direction: column;
+        margin-bottom: 0;
+        width: 90%;
+    }
+
+    .archive-box .item {
+        margin: 0;
+        margin-bottom: 2em;
+        align-self: baseline;
+        width: 100%;
+    }
+
+        .archive-box p {
+            height: auto;
+            max-height: 125px;
+        }
+
+}
