@@ -1,0 +1,168 @@
+.badge .badge-tooltiptext::after,[class~=avatar]{
+    border-left-width:3.75pt;
+}
+.badge .badge-tooltiptext::after{
+    content:"";
+}
+.badge .badge-tooltiptext::after,[class~=avatar]{
+    border-bottom-width:3.75pt;
+}
+[class~=badge] [class~=badge-tooltiptext],.badge .badge-tooltiptext::after{
+    position:absolute;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    visibility:hidden;
+}
+[class~=avatar],.badge .badge-tooltiptext::after{
+    border-right-width:3.75pt;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    width:120px;
+}
+.editBtn,[class~=badge] [class~=badge-tooltiptext]{
+    background-color:transparent;
+}
+.badge .badge-tooltiptext::after,[class~=avatar]{
+    border-top-width:3.75pt;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    color:#000;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    text-align:center;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    border-radius:4.5pt;
+}
+[class~=avatar],.badge .badge-tooltiptext::after{
+    border-left-style:solid;
+}
+.badge .badge-tooltiptext::after{
+    top:100%;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    padding-left:0;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    padding-bottom:.052083333in;
+}
+.badge .badge-tooltiptext::after,[class~=badge] [class~=badge-tooltiptext]{
+    left:50%;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    padding-right:0;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    padding-top:.052083333in;
+}
+.badge .badge-tooltiptext::after{
+    margin-left:-5px;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    z-index:1;
+}
+.badge .badge-tooltiptext::after,[class~=avatar]{
+    border-bottom-style:solid;
+}
+.badge .badge-tooltiptext::after,[class~=avatar]{
+    border-right-style:solid;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    bottom:125%;
+}
+[class~=avatar],.badge .badge-tooltiptext::after{
+    border-top-style:solid;
+}
+[class~=avatar]{
+    border-left-color:#fff;
+}
+[class~=avatar]{
+    border-bottom-color:#fff;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    margin-left:-3.75pc;
+}
+[class~=badge]:hover [class~=badge-tooltiptext]{
+    visibility:visible;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    opacity:0;
+}
+[class~=avatar]{
+    border-right-color:#fff;
+}
+[class~=avatar]{
+    border-top-color:#fff;
+}
+[class~=badge] [class~=badge-tooltiptext]{
+    transition:opacity .3s;
+}
+[class~=avatar]{
+    border-image:none;
+}
+[class~=avatar]{
+    height:150pt;
+}
+[class~=avatar]{
+    width:12.5pc;
+}
+[class~=avatar]{
+    object-fit:cover;
+}
+[class~=avatar]{
+    border-radius:50%;
+}
+[class~=avatar]{
+    left:7.5pt;
+}
+[class~=badge],.status,[class~=badge],.avatar{
+    position:relative;
+}
+[class~=badge]{
+    display:inline-block;
+}
+[class~=badge]{
+    height:18.75pt;
+}
+[class~=badge]{
+    width:1.5625pc;
+}
+.editBtn{
+    background-size:cover;
+}
+.badge .badge-tooltiptext::after{
+    border-left-color:transparent;
+}
+.badge .badge-tooltiptext::after{
+    border-bottom-color:transparent;
+}
+.badge .badge-tooltiptext::after{
+    border-right-color:transparent;
+}
+.editBtn{
+    border-radius:.4375pc;
+}
+.editBtn{
+    padding-left:.5pc;
+}
+.editBtn{
+    padding-bottom:.5pc;
+}
+.editBtn{
+    padding-right:.5pc;
+}
+.badge .badge-tooltiptext::after{
+    border-top-color:transparent;
+}
+.editBtn{
+    padding-top:.5pc;
+}
+.editBtn{
+    color:white;
+}
+.editBtn{
+    cursor:pointer;
+}
+[class~=badge]:hover [class~=badge-tooltiptext]{
+    opacity:1;
+}
