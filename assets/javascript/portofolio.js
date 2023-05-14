@@ -47,7 +47,7 @@ $(document).ready(() => {
   }
 
   app.titleChanger(['zyph', 'genny', 'haz', 'esex warriors', 'fucking skids', '=', 'im racist', 'lmfao']);
-  app.iconChanger(['assets/icons/roses/rose1.jpg', 'assets/icons/roses/rose2.jpg', 'assets/icons/roses/rose3.jpg', 'assets/icons/roses/rose4.jpg', 'assets/icons/roses/rose5.jpg', 'assets/icons/roses/rose6.jpg', 'assets/icons/roses/rose7.jpg', 'assets/icons/roses/rose8.jpg', 'assets/icons/roses/rose1.jpg']);
+  app.iconChanger(['https://cdn.discordapp.com/emojis/1104371293433905284.png?size=80&quality=lossless', 'https://cdn.discordapp.com/emojis/1104371293433905284.png?size=80&quality=lossless', 'https://cdn.discordapp.com/emojis/1104371293433905284.png?size=80&quality=lossless', 'https://cdn.discordapp.com/emojis/1104371293433905284.png?size=80&quality=lossless', 'https://cdn.discordapp.com/emojis/1104371293433905284.png?size=80&quality=lossless', 'https://cdn.discordapp.com/emojis/1104371293433905284.png?size=80&quality=lossless', 'assets/icons/roses/rose7.jpg', 'https://cdn.discordapp.com/emojis/1104371293433905284.png?size=80&quality=lossless', 'https://cdn.discordapp.com/emojis/1104371293433905284.png?size=80&quality=lossless']);
 });
 
 if ($.cookie('videoTime')) {
@@ -78,7 +78,7 @@ $('html').on('contextmenu', (event) => {
 
   const trollfaceLight = app.skippedIntro ? '' : 'trollface-light';
 
-  img.src = 'assets/others/trollface.jpg';
+  img.src = 'https://cdn.discordapp.com/attachments/1104359881143754891/1107254577465667716/trollface.jpg';
   img.width = 64;
   img.height = 64;
   img.alt = 'ily.bio/eye';
