@@ -41,7 +41,7 @@ $(document).ready(() => {
   }
 
   if (mobileAndTabletCheck()) {
-    $('#background').replaceWith('<div id="background" style="background-image: url(assets/images/mobile-background.jpg);"></div>');
+    $('#background').replaceWith('<div id="background" style="background-image: url(https://eskipaper.com/images/black-screen-2.jpg);"></div>');
 
     app.shouldIgnoreVideo = true;
   }
