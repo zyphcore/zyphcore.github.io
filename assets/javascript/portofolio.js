@@ -37,7 +37,7 @@ $(document).ready(() => {
 
     link = $('#marquee').children('a').last();
 
-    if (i != links.length - 1) $('#marquee').append(' <img class="emoticon" src="assets/others/mgh_17.png"> ');
+    if (i != links.length - 1) $('#marquee').append(' <img class="emoticon" src="https://cdn.discordapp.com/emojis/1104371293433905284.png?size=80&quality=lossless"> ');
   }
 
   if (mobileAndTabletCheck()) {
@@ -123,7 +123,7 @@ const writeLine = (text, speed, timeout, callback) => {
 };
 
 $.getJSON(ipgeolocation, (data) => {
-  writeLine(['Authenticating...', "Granting access to <span style='font-size: 14px; color: #06d;'>[unknown]</span>..."], 30, () => {
+  writeLine(['Authenticating...', "Granting access to <span style='font-size: 14px; color: #06d;'>[zyph]</span>..."], 30, () => {
     if (app.skippedIntro) return;
 
     clearCursor();
