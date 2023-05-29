@@ -15,83 +15,74 @@
     <meta itemprop="description" content="卐" />
     <meta itemprop="image" content="https://cdn.discordapp.com/attachments/1077619396790468659/1107060842735878205/49aab801beef00ea276463fd2a08e783.gif" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<style>
+  #timeline-progress {
+    width: 0%;
+  }
+</style>
 
-    <link rel="shortcut icon" href="https://cdn.discordapp.com/emojis/1104371293433905284.png?size=80&quality=lossless" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="assets/stylesheet/stylesheet.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-  </head>
-
-  <body>
-    <script type="text/javascript" src="assets/javascript/zmain.js"></script>
-
-    <div id="main">
-      <table class="box">
-        <tbody>
-          <tr>
-            <td><span id="line1" style="white-space: pre;"></span></td>
-          </tr>
-          <tr>
-            <td><span id="line2" style="white-space: pre;"></span></td>
-          </tr>
-          <tr>
-            <td><span id="line3 space" style="white-space: pre;"></span></td>
-          </tr>
-          <tr>
-            <td><span id="line4" style="white-space: pre;"></span></td>
-          </tr>
-        </tbody>
-      </table>
+<body>
+  <video muted="muted" loop="" playsinline="" preload="auto" class="fullscreen bg-video" id="video">
+    <source src="https://media.discordapp.net/attachments/1034419569336528898/1053574387527331920/a_0f82f4ba41d0fe231c9ecd2ad1ea814a.gif" type="video/mp4">
+  </video>
+  <div class="container">
+    <div class="box">
+      <center><img class="profile-picture" src="assets/profile.png" alt="Profile Picture"></center>
+      <center>
+        <div class="profile-container">
+          <div class="name">zyph</div>
+          <a class="social-icon" class="button">
+            <img src="https://cdn.discordapp.com/attachments/1107424056854204498/1112711721061204019/verified.png" alt="Only for verified" style="width: 30px; fill: #1b89d3;">
+            <span class="tooltip" style="font-size: 15px; font-family: Tahoma, sans-serif; color: #ffffff; filter: drop-shadow(#ffffff); color: #ffffff;">Premium</span>
+          </a>
+          <br>
+        </div>
+      </center>
+      <center>
+        <body onload="typeWriter()">
+          <p id="typing" style="font-size: 15px; font-family: 'Roboto Mono', monospace; color: #960909; filter: drop-shadow(#8b1b1b); color: #8b1b1b;"></p>
+          <br>
+          <div class="social-icons">
+            <a class="social-icon" href="https://github.com/zyphcore" class="button">
+              <i class="fab fa-github" style="font-size:30px;"></i>
+              <span class="tooltip" style="font-size: 15px; font-family: Tahoma, sans-serif; color: #ffffff; filter: drop-shadow(#ffffff); color: #ffffff;">Github</span>
+            </a>
+            <a class="social-icon" href="https://www.instagram.com/zyphcore" class="button">
+              <i class="fab fa-instagram" style="font-size:30px;"></i>
+              <span class="tooltip" style="font-size: 15px; font-family: Tahoma, sans-serif; color: #ffffff; filter: drop-shadow(#ffffff); color: #ffffff;">Instagram</span>
+            </a>
+            <a class="social-icon" href="https://discordapp.com/users/551017318071795716" class="button">
+              <i class="fab fa-discord" style="font-size:30px;"></i>
+              <span class="tooltip" style="font-size: 15px; font-family: Tahoma, sans-serif; color: #ffffff; filter: drop-shadow(#ffffff); color: #ffffff;">Discord</span>
+            </a>
+          </div>
+          <audio id="audio-player">
+            <source src="https://cdn.discordapp.com/attachments/1107424056854204498/1112711489892130826/scars.mp3" type="audio/mpeg">
+          </audio>
+          <div id="player-container">
+            <div id="song-title" style="font-size: 18px; font-family: 'Roboto Mono', monospace; color: #960909; filter: drop-shadow(#8b1b1b); color: #8b1b1b;">
+              Playing: scars
+            </div>
+            <div id="timeline-container">
+              <div id="timeline">
+                <div id="timeline-progress"></div>
+                <div id="timeline-circle"></div>
+              </div>           
+            </div>
+            <div id="controls-container">
+              <span id="current-time" style="font-family: monospace; color: #960909;">00:00</span>
+              <button id="play-btn"><i class="fas fa-play"></i></button>
+              <span id="end-time" style="font-family: monospace; color: #960909;">00:00</span>
+            </div>
+          </div>
+        </body>
+      </center>
     </div>
+  </div>
+</body>
 
-    <div class="container" style="display: none;">
-      <h1 class="brand-header">
-        <a href="https://discord.gg/delusional" target="_BLANK">zyph#0001</a>
-      </h1>
 
-      <p><span id="brand"></span></p>
-    </div>
-
-    <div class="marquee-container" style="visibility: hidden;">
-      <pre>|<div id="marquee"></div>|</pre>
-    </div>
-
-    <div class="background" style="display: none;">
-      <div id="pattern"></div>
-
-      <audio id="audio" loop="">
-        <source src="https://cdn.discordapp.com/attachments/1077619396790468659/1107236497347846204/zyph0001_save_me.mp3" type="audio/mp3" />
-        <script>
-          const audio = document.getElementById('audio');
-
-          app.audioElement = audio;
-          app.audioElement.volume = 0;
-        </script>
-      </audio>
-
-      <video id="background" loop="">
-        <source src="https://cdn.discordapp.com/attachments/1077619396790468659/1107059303195615252/zyph0001.mp4" type="video/mp4" />
-        <script>
-          const video = document.getElementById('background');
-
-          app.videoElement = video;
-          app.videoElement.volume = 0;
-        </script>
-      </video>
-    </div>
-
-    <div class="top-right">
-      <i><a class="skip">skip intro</a></i>
-    </div>
-
-    <div class="footer">
-      <i><a href="https://discord.gg/delusional" target="_BLANK">Discord server</a></i>
-    </div>
-
-    <script type="text/javascript" src="assets/javascript/lib/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/lib/jquery.marquee.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/lib/jquery.cookie.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/lib/typed.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/portofolios.js"></script>
-    <script type="text/javascript" src="assets/javascript/analytics.js"></script>
-  </body>
+<!--SCRIPTS-->
+<script src ="https://felony.wtf/assets/main.js"></script>
 </html>
