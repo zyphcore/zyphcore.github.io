@@ -122,33 +122,7 @@
      if(e.ctrlKey && e.keyCode == 82) {
        return false;
      }
- } 
-	      document.onmousemove = function (e) {
-        if (sparkles_enabled && !e.buttons) {  // allow more sparkles the faster the mouse moves
-
-            const distance = Math.sqrt(Math.pow(e.movementX, 2) + Math.pow(e.movementY, 2));
-            const delta_x = e.movementX * sparkle_distance * 2 / distance;
-            const delta_y = e.movementY * sparkle_distance * 2 / distance;
-            const probability = distance / sparkle_distance;
-            let cumulative_x = 0;
-
-            // where to make the star: where the moise pointer is for now
-            let mouse_y = e.pageY;
-            let mouse_x = e.pageX;
-
-            // create a star and move back until we reach where the mouse was before
-            while (Math.abs(cumulative_x) < Math.abs(e.movementX)) {
-                create_star(mouse_x, mouse_y, probability);
-
-                let delta = Math.random();
-                mouse_x -= delta_x * delta;
-                mouse_y -= delta_y * delta;
-                cumulative_x += delta_x * delta;
-            }
-        }
-    };
-}
-	  
+ } 	  
 </script>
 
 </html>
