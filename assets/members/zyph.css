@@ -1,0 +1,51 @@
+body{
+    background-image:url(media/onstar.jpg);
+    object-fit:cover;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center
+}
+.social{
+    top:50%;
+    left:50%;
+    z-index:2;
+    display:flex;
+    margin:0 auto;
+    padding:5px 10px;
+    object-fit:cover;
+    position:absolute;
+    border-radius:20px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    object-position:center center;
+    transform:translate(-50%,-50%);
+    background-position:center center;
+    box-shadow:0 0 40px #000;
+    background-color:rgba(0,0,0,.5)
+}
+@media(
+    max-width:768px
+    )
+{body{
+    height:100vh;
+    object-fit:cover;
+    margin:0!important;
+    background-size:cover;
+    background-repeat:no-repeat;
+    min-height:-webkit-fill-available
+}
+#main{
+    display:block!important
+}
+#video{
+    display:none
+}
+.social{
+    box-shadow:none
+}}
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+	color: #fff;
+}
