@@ -233,8 +233,8 @@ pre {
 #widgetContainer {
 	opacity: 0;
 	position: absolute;
-	right: 800px;
-	top: 550px;
+	right: 760px;
+	top: 450px;
 	width: 400px;
 	height: 38px;
 	background: repeating-linear-gradient(-45deg, red 0%, purple 12.5%, orange 25%, cyan 37.5%, red 50%);
