@@ -1,0 +1,26 @@
+body{
+    background-image:url();
+    object-fit:cover;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center
+}
+{body{
+    height:100vh;
+    object-fit:cover;
+    margin:0!important;
+    background-size:cover;
+    background-repeat:no-repeat;
+    min-height:-webkit-fill-available
+}
+#main{
+    display:block!important
+}
+#video{
+    display:none
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+}
