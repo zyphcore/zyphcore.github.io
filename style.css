@@ -1,0 +1,178 @@
+* {
+    cursor: url(https://cur.cursors-4u.net/nature/nat-11/nat1034.ani), url(https://cur.cursors-4u.net/nature/nat-11/nat1034.gif), auto !important;
+}
+
+@font-face {
+    font-family: derk;
+    src: url('derk.otf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+html {
+    font-family: 'Roboto Mono', monospace;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#brand {
+    margin-left: 0.65pc;
+    text-decoration: none;
+    text-shadow: 0 0 0.40em #e4e3e3;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+
+
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto Mono', monospace;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(2, 2, 2);
+}
+
+.back {
+    width: 100%;
+}
+
+#overlay-toggle {
+    position: absolute;
+    display: none;
+}
+
+.overlay {
+    z-index: 1;
+    background-color: rgb(8, 8, 8);
+}
+
+.overlay label {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vw;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}
+
+.no-hover {
+    display: block;
+}
+
+.hover {
+    display: none;
+}
+
+.fullscreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.bg-video {
+    z-index: -1;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #000 !important;
+    color: #fff !important
+}
+
+a {
+    text-decoration: none;
+    color: gray !important
+}
+
+a:hover {
+    transition: .4s !important;
+    color: #fff !important
+}
+
+#center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Consolas', monospace;
+}
+
+#socials {
+    position: fixed;
+    top: 57.5%;
+    left: 40%;
+    right: 40%;
+    text-align: center;
+    font-family: 'Consolas', monospace;
+}
+
+
+#overlay-toggle:checked~.overlay {
+    animation-fill-mode: forwards;
+    animation-name: fade, hide;
+    animation-delay: 0s, 600ms;
+    animation-duration: 600ms, 1ms;
+}
+
+#overlay-toggle:checked~.overlay label {
+    animation-fill-mode: forwards;
+    animation-name: fade;
+    animation-delay: 0s;
+    animation-duration: 500ms;
+}
+
+@media(hover: hover) {
+    .hover {
+        display: block;
+    }
+
+    .no-hover {
+        display: none;
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes hide {
+    to {
+        visibility: hidden;
+    }
+}
+
+.typed-cursor {
+    font-size: 30px;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
