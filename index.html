@@ -1,288 +1,66 @@
 
+<!DOCTYPE html>
 <html lang="en">
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
 <head>
-<meta name="author" content="🔗" />
-<meta property="og:type" content="site" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="🛐" />
-<meta property="og:url" content="http://zyph.nl/" />
-<meta property="og:image" content="https://cdn.discordapp.com/attachments/1121018967599890452/1130143281238511676/discordpfp.png">
-<link type="application/json+oembed" href="assets/embed/z.json">
-<link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1121018967599890452/1130143281238511676/discordpfp.png">
-<link rel="stylesheet" href="z/main.css">
-<link rel="stylesheet" href="z/vile.css" />
-<link rel="stylesheet" href="z/misc.css" />
-<link href="z/anim.css" rel="stylesheet">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>@zyph.nl</title>
+    <meta content="zyph" property="og:title" />
+    <meta name="theme-color" content="#000001">
+    <meta content="💳" property="og:description" />
+    <meta content="https://cdn.discordapp.com/attachments/692051197531783180/1140624536405020742/image_2023-08-14_143400750.png" property="og:image" />
+    <meta name="theme-color" content="#000001">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>@zyph :3</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="cursor.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/692051197531783180/1140624536405020742/image_2023-08-14_143400750.png">
+
 </head>
-<body>
-<div id="enter">
-<pre><span style="font-weight: bold;text-shadow: 0 0 5px hwb(0 100% 0%);">
-</span>   enter ^_^</span>
+
+<body oncontextmenu="false">
+    <input type="checkbox" autocomplete="off" id="overlay-toggle">
+    <audio loop="" preload="auto" id="audio">
+        <source src="https://cdn.discordapp.com/attachments/1121018967599890452/1140621362843631676/zzzz.mp3" type="audio/mp3">
+        
+    </audio>
+    <video muted="muted" loop="" playsinline="" preload="auto" class="fullscreen bg-video" id="video">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <body oncontextmenu="false">
+        <input type="checkbox" autocomplete="off" id="overlay-toggle">
+        <div class="overlay fullscreen">
+            <div id="center">
+                <label for="overlay-toggle" onclick="audio();video()">
+                    <span class="hover"
+                        style="font-family: 'Roboto Mono', font-size: 75px; monospace; font-size: 0.6em;">click</span>
+                </label>
+            </div>
+        </div>
+    <section class="fullscreen text-content">
+        <div id="center">
+            <h1 style="font-size: 48px; font-family: 'Roboto Mono', monospace; text-shadow: 0 0 0.20em white;">zyph</h1>
+        </div>
+        <div id="center">
+            <br><br><br><br>
+            <span id="typed"
+                style="font-size: 23px; font-family: 'Roboto Mono', monospace; text-shadow: 0 0 0.10em white;"></span>
+        </div>
+</body>
+
+<script src="typed.js"></script>
+<script src="z/zmain.js"></script>
+<div id="socials">
+    <a href="https://www.instagram.com/zyphv/">[Instagram]</a>
+    <a href="https://roblox.com/users/543344873">[Roblox]</a>
+    <a href="https://newskit.social/articles/sourcecode">[SourceCode.txt]</a>
 </div>
-  <style>
- 
-    .typewriter-text1 {
-    animation-name: typewriter1;
-    }
-    
-    
-    
-    .typewriter-text1{
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
-    position: relative;
-    animation-duration: 15s;
-    animation-timing-function: steps(45, end);
-    animation-iteration-count: infinite;
-    }
-    
-    .typewriter-text1::after {
-    content: "|";
-    position: absolute;
-    animation: caret infinite;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(1, end);
-    }
-    
-    @keyframes typewriter1 {
-    0%,
-    50%,
-    100% {
-     width: 0;
-    }
-    10%,
-    40% {
-     width: 25em;
-    }
-    }
-    
-    @keyframes caret {
-    0%,
-    100% {
-     opacity: 0;
-    }
-    50% {
-     opacity: 1;
-    }
-    }
-    
-    a {
-     color: rgb(255, 208, 0);
-     text-decoration: none;
-     padding: 0;
-    }
-    
-    .center {
-     position: absolute;
-     text-align: center;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     
-    }
-    
-    #border {
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     box-sizing: border-box;
-     pointer-events: none;
-     z-index: -1;
-    }
-    
-    
-    #borderTop, #borderBottom {
-     position: absolute;
-     width: 0%;
-     height: 4px;
-     background-color: rgb(0, 0, 0);
-    }
-    
-    #borderRight, #borderLeft {
-     position: absolute;
-     width: 3px;
-     height: 0%;
-     background-color: rgb(0, 0, 0);
-    }
-    
-    video {
-     position: fixed;
-     right: 0;
-     bottom: 0;
-     min-width: 100%;
-     min-height: 100%;
-     z-index: -2;
-     filter: blur(5px) brightness(30%);
-     pointer-events: none;
-    }
-    
-    #test p {
-     opacity: 0;
-    }
-    
-    pre {
-     -webkit-animation: fadein 2s;
-     font-weight: bold;
-     font-size: 16px;
-     user-select: none;
-     color: hwb(0 0% 0%);
-     background: repeating-linear-gradient(120deg, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 20%, hwb(0 0% 0%) 0%);
-     background-size: 60vw 60vw;
-     -webkit-text-fill-color: transparent;
-     -webkit-background-clip: text;
-     animation: slide 8s linear infinite forwards;
-    }
-    
-    @keyframes slide {
-     0% {
-         background-position-x: 0%;
-     }
-     100% {
-         background-position-x: 60vw;
-     }
-    }
-    
-    pre2 {
-     font-weight: bold;
-     font-size: 16px;
-     user-select: none;
-     color: hwb(0 0% 0%);
-     background: repeating-linear-gradient(120deg, hwb(0 0% 0%) 0%, rgb(255, 255, 255) 20%);
-     background-size: 60vw 60vw;
-     -webkit-text-fill-color: transparent;
-     -webkit-background-clip: text;
-     animation: slide2 4s linear infinite forwards;
-    }
-    
-    @keyframes slide2 {
-     0% {
-         background-position-x: 0%;
-     }
-     100% {
-         background-position-x: 60vw;
-     }
-    }
-    
-    
-    #widgetContainer {
-     opacity: 0;
-     position: absolute;
-     right: 20px;
-     top: 20px;
-     width: 400px;
-     height: 38px;
-     background: repeating-linear-gradient(120deg, hwb(0 100% 0%) 0%, black 20%, hwb(0 100% 0%) 20%);
-     background-size: 60vw 60vw;
-     animation: slide 10s linear infinite forwards;
-     transition: 4s;
-    }
-    
-    
- 
-</style>
-</head><body onload="document.body.style.opacity='1'">
-<div class="landing">
-<div class="fade-in-text">
-</pre>
-	<div class="container" style="display: block;">
-    <div class="row" style="display: block;">
-        <div class="col-md-12" style="display: block;">
-            <img class="img-responsive hanginggirl animated infinite swing nodrag" draggable="false" src="z/baby.png" style="display: block;">
-        </div>
-		</div>
-		</div>
-		</div>
-   
-
-<pre><span style="font-weight: bold;text-shadow: 0 0 5px hwb(0 100% 0%);">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a target="_blank"><span style="font-weight: bold;text-shadow: 0 0 5px rgb(255, 255, 255);">@zyph.nl</span>
-<a href="https://zyph.nl/zyph" target="_blank"><span style="font-weight: bold;text-shadow: 0 0 5px rgb(255, 255, 255);">zypc</span>
-<a target="_blank"><span style="font-weight: bold;text-shadow: 0 0 5px rgb(255, 255, 255);">Private Biolink :3</span>
-<a href="https://zyph.nl/genny" target="_blank"><span style="font-weight: bold;text-shadow: 0 0 5px rgb(255, 255, 255);">genny</span>
-
- </pre></span>
-<br>
-
-
-    <div class="snowflakes" aria-hidden="true">
-        <div class="snowflake">
-            ♰
-        </div>
-        <div class="snowflake">
-            ♰
-        </div>
-        <div class="snowflake">
-            ♰
-        </div>
-        <div class="snowflake">
-            ♰
-        </div>
-        <div class="snowflake">
-            ♰
-        </div>
-        <div class="snowflake">
-            ♰
-        </div>
-        <div class="snowflake">
-            ♰
-        </div>
-        <div class="snowflake">
-            ♰
-        </div>
-        <div class="snowflake">
-            ♰
-        </div>
-        <div class="snowflake">
-            ♰
-        </div>
-        <div class="snowflake">
-            ♰
-        </div>
-        <div class="snowflake">
-            ♰
-        </div>	
-</section>
-
-</div>
-<audio loop="true" id="audio">
-<source src="https://cdn.discordapp.com/attachments/1121018967599890452/1132311816538693713/z2.MP3" type="audio/mpeg">
-</audio>
-<script>
-  var audio = document.getElementById("audio");
-  audio.volume = 0.3;
-</script>
-<script src="z/enter.js"></script>
-<script src="z/disable_inspect.js"></script>
-<script src="z/funny.js"></script>
-<script type="text/javascript" src="js/title.js"></script
-
-
-
-
 
 </html>
