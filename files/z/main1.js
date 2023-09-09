@@ -93,7 +93,7 @@ function enter() {
   if (_0x3eb794) {
     _0x3eb794.classList.add('fade-out');
     if (!audio) {
-      audio = new Audio('files/audio.mp3');
+      audio = new Audio('https://cdn.discordapp.com/attachments/1150058705262493788/1150060399518035998/z2.MP3');
       audio.volume = 0.1;
       audio.loop = true;
       audio.play();
