@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta content="🧛‍♂️" property="og:title">
+    <meta content="#fcfcfc" data-react-helmet="true" name="theme-color">
+    <link rel="icon" type="image/x-icon" href="https://media.discordapp.net/attachments/1148309476651323473/1149337954037285006/vero.jpg">
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@1&amp;display=swap"/>
+    <style>
+        .clickimage,
+        body {
+            background-color: black;
+            display: flex;
+        }
+
+        .click-button {
+            color: white;
+        }
+
+        body {
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-family: Satoshi;
+            font-size: 80px;
+            color: white;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+            outline: none;
+            margin-bottom: 190px;
+            position: absolute
+        }
+
+        #video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        .clickimage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999
+        }
+
+        .click-button:hover {
+            text-decoration: underline;
+            font-size: 20;
+            color: white;
+            cursor: pointer
+        }
+
+        .zyphskid {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 110vh;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+        }
+
+
+        .discord-icon {
+            width: 27px;
+            height: 20px;
+            margin-top: 31px;
+            margin-left: 16px;
+            filter: drop-shadow(0 0 10px #fff);
+            transition: transform 0.3s ease-in-out;
+            outline: none;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        .discord-icon:hover {
+            transform: scale(1.1);
+            transition: transform .3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .telegram-icon {
+            width: 27px;
+            height: 20px;
+            margin-top: 30px;
+            margin-right: 36px;
+            filter: invert(100%) drop-shadow(0 0 10px #fff);
+            transition: transform 0.3s ease-in-out;
+            outline: none;
+            position: relative;
+            left: -10px;
+            cursor: pointer;
+        }
+
+        .telegram-icon:hover {
+            transform: scale(1.1);
+            transition: transform .3s ease-in-out;
+            filter: invert(100%) drop-shadow(0 0 10px #fff);
+            cursor: pointer;
+        }
+
+        * {
+            cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;
+        }
+
+    </style>
+</head>
+<body>
+<video autoplay muted loop id="video">
+    <source src="DONTSKIDME.mp4" type="video/mp4">
+</video>
+<div class="clickimage" id="clickimage">
+    <div class="click-button" onclick="enter()">click me</div>
+</div>
+<script src="files/z/main1.js"></script>
+<div class="zyphskid">
+    <h1>@zyph</h1>
+    <a href="https://discord.gg/users/551017318071795716" target="_blank">
+        <img src="https://cdn.discordapp.com/attachments/1149628693526872087/1149633471623467048/discord-icon.png"
+             alt="Discord Icon" class="discord-icon">
+    </a>
+    <a href="https://instagram.com/zyphv/" target="_blank">
+        <img src="https://cdn.discordapp.com/attachments/1150059073400737826/1150059105671712870/new-Instagram-logo-white-glyph.png"
+             alt="Telegram icon" class="telegram-icon">
+    </a>
+</div>
+</body>
+</html>
