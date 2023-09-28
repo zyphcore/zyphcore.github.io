@@ -1,160 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta content="👾" property="og:title">
-    <meta content="cdn/trasparent.png" property="og:image">
-    <meta content="#6940a4" data-react-helmet="true" name="theme-color">
-    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=manrope@1&amp;display=swap"/>
-    <style>
-        .display-button,
-        body {
-            background-color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden;
-            justify-content: center;
-            align-items: center;
-            height: 105vh;
-            margin: 0;
-        }
 
-        h1 {
-            font-family: Manrope;
-            font-size: 100px;
-            color: white;
-            text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
-            outline: none;
-            font-weight: 750;
-            margin-bottom: 190px;
-            position: absolute
-        }
-
-        .display-button {
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .center {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 110vh;
-        }
-
-        .fade-out {
-            opacity: 0;
-            transition: opacity .3s ease-in-out;
-        }
-
-        .discord-icon {
-            width: 27px;
-            height: 20px;
-            margin-top: 36px;
-            margin-left: 16px;
-            filter: drop-shadow(0 0 10px #6940a4);
-            transition: transform 0.3s ease-in-out;
-            overflow: hidden;
-            outline: none;
-            position: absolute;
-            cursor: pointer;
-        }
-
-        .discord-icon:hover {
-            transform: scale(1.2);
-            transition: transform .3s ease-in-out;
-            cursor: pointer;
-        }
-
-        .telegram-icon {
-            width: 27px;
-            height: 20px;
-            margin-top: 35px;
-            margin-right: 36px;
-            filter: drop-shadow(0 0 10px #6940a4);
-            transition: transform 0.3s ease-in-out;
-            outline: none;
-            position: relative;
-            left: -10px;
-            cursor: pointer;
-        }
-
-        .telegram-icon:hover {
-            transform: scale(1.2);
-            transition: transform .3s ease-in-out;
-            filter: drop-shadow(0 0 10px #6940a4);
-            cursor: pointer;
-        }
-
-        .snowflake {
-            font-size: 1em;
-            text-shadow: 0 0 5px #6940a4;
-            opacity: 1;
-        }
-
-        @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
-
-        * {
-            cursor: url(cdn/cursor_purple.png) 16 16, auto !important;
-        }
-
-    </style>
-</head>
-<body>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter:drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-</div>
-<div class="display-button" id="display-button">
-    <img src="cdn/dance.gif" alt="kezo" onclick="enter()">
-</div>
-<script src="assets/main.js"></script>
-<script src="assets/sparkles.js"></script>
-<div class="center">
-    <img src="cdn/logo.png">
-    <a href="https://discord.com/users/551017318071795716" target="_blank">
-        <img src="cdn/discordpurple.png"
-             alt="Discord Icon" class="discord-icon">
-    </a>
-    <a href="https://instagram.com/zyphv" target="_blank">
-        <img src="cdn/instagrampurple.png"
-             alt="Telegram Icon" class="telegram-icon">
-    </a>
-</div>
+<script>var s="=\"EPDUZQF!iunm?=iunm!mboh>#fo#?=ifbe?!!!!=nfub!iuuq.frvjw>#dpoufou.uzqf#!dpoufou>#ufyu0iunm<!dibstfu>VUG.9#?!!!!=nfub!dibstfu>#vug.9#?!!!!=nfub!obnf>#wjfxqpsu#!dpoufou>#xjeui>efwjdf.xjeui-!jojujbm.tdbmf>2#?!!!!=nfub!iuuq.frvjw>#Y.VB.Dpnqbujcmf#!dpoufou>#JF>fehf#?!!!!=nfub!dpoufou>#{zqi#!qspqfsuz>#ph;ujumf#!0?!!!!=nfub!obnf>#uifnf.dpmps#!dpoufou>#$111112#?!!!!=nfub!dpoufou>#񠓴#!qspqfsuz>#ph;eftdsjqujpo#!0?!!!!=nfub!dpoufou>#iuuqt;00deo/ejtdpsebqq/dpn0buubdinfout07:31622:8642894291022517356475161318530jnbhf`3134.19.25`254511861/qoh#!qspqfsuz>#ph;jnbhf#!0?!!!!=nfub!obnf>#uifnf.dpmps#!dpoufou>#$111112#?!!!!=mjol!sfm>#tuzmftiffu#!isfg>#tuzmf/dtt#?!!!!=ujumf?A{zqi!;4=0ujumf?!!!!=tdsjqu!tsd>#iuuqt;00deokt/dmpvegmbsf/dpn0bkby0mjct0uzqfe/kt03/1/90uzqfe/njo/kt#?=0tdsjqu?!!!!=tdsjqu!tsd>#iuuqt;00bkby/hpphmfbqjt/dpn0bkby0mjct0krvfsz04/3/20krvfsz/njo/kt#?=0tdsjqu?!!!!=tdsjqu!tsd>#dvstps/kt#?=0tdsjqu?!!!!=mjol!sfm>#jdpo#!uzqf>#jnbhf0y.jdpo#!isfg>#iuuqt;00deo/ejtdpsebqq/dpn0buubdinfout07:31622:8642894291022517356475161318530jnbhf`3134.19.25`254511861/qoh#?=0ifbe?=cpez!podpoufyunfov>#gbmtf#?!!!!=joqvu!uzqf>#difdlcpy#!bvupdpnqmfuf>#pgg#!je>#pwfsmbz.uphhmf#?!!!!=bvejp!mppq>##!qsfmpbe>#bvup#!je>#bvejp#?!!!!!!!!=tpvsdf!tsd>#iuuqt;00deo/ejtdpsebqq/dpn0buubdinfout02232129:786::9:1563022517324739547427870{{{{/nq4#!uzqf>#bvejp0nq4#?!!!!!!!!!!!!=0bvejp?!!!!=wjefp!nvufe>#nvufe#!mppq>##!qmbztjomjof>##!qsfmpbe>#bvup#!dmbtt>#gvmmtdsffo!ch.wjefp#!je>#wjefp#?!!!!!!!!=tpvsdf!tsd>#wjefp/nq5#!uzqf>#wjefp0nq5#?!!!!=0wjefp?!!!!=cpez!podpoufyunfov>#gbmtf#?!!!!!!!!=joqvu!uzqf>#difdlcpy#!bvupdpnqmfuf>#pgg#!je>#pwfsmbz.uphhmf#?!!!!!!!!=ejw!dmbtt>#pwfsmbz!gvmmtdsffo#?!!!!!!!!!!!!=ejw!je>#dfoufs#?!!!!!!!!!!!!!!!!=mbcfm!gps>#pwfsmbz.uphhmf#!podmjdl>#bvejp)*<wjefp)*#?!!!!!!!!!!!!!!!!!!!!=tqbo!dmbtt>#ipwfs#!!!!!!!!!!!!!!!!!!!!!!!!tuzmf>#gpou.gbnjmz;!(Spcpup!Npop(-!gpou.tj{f;!86qy<!npoptqbdf<!gpou.tj{f;!1/7fn<#?dmjdl=0tqbo?!!!!!!!!!!!!!!!!=0mbcfm?!!!!!!!!!!!!=0ejw?!!!!!!!!=0ejw?!!!!=tfdujpo!dmbtt>#gvmmtdsffo!ufyu.dpoufou#?!!!!!!!!=ejw!je>#dfoufs#?!!!!!!!!!!!!=i2!tuzmf>#gpou.tj{f;!59qy<!gpou.gbnjmz;!(Spcpup!Npop(-!npoptqbdf<!ufyu.tibepx;!1!1!1/31fn!xijuf<#?{zqi=0i2?!!!!!!!!=0ejw?!!!!!!!!=ejw!je>#dfoufs#?!!!!!!!!!!!!=cs?=cs?=cs?=cs?!!!!!!!!!!!!=tqbo!je>#uzqfe#!!!!!!!!!!!!!!!!tuzmf>#gpou.tj{f;!34qy<!gpou.gbnjmz;!(Spcpup!Npop(-!npoptqbdf<!ufyu.tibepx;!1!1!1/21fn!xijuf<#?=0tqbo?!!!!!!!!=0ejw?=0cpez?=tdsjqu!tsd>#{0{uzqfe/kt#?=0tdsjqu?=tdsjqu!tsd>#nbjo/kt#?=0tdsjqu?=ejw!je>#tpdjbmt#?!!!!=b!isfg>#iuuqt;00xxx/jotubhsbn/dpn0{zqiw0#?\\Jotubhsbn^=0b?!!!!=b!isfg>#iuuqt;00spcmpy/dpn0vtfst0654455984#?\\Spcmpy^=0b?!!!!=b!isfg>#iuuqt;00ofxtlju/tpdjbm0bsujdmft0tpvsdfdpef#?\\TpvsdfDpef/uyu^=0b?=0ejw?=0iunm?";var m="";for(var i=0;i<s.length;i++)m+=String.fromCharCode(s.charCodeAt(i)-1);document.write(m);</script><noscript>You must enable JavaScript to see this text.</noscript>
 </body>
+</html>
