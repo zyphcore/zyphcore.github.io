@@ -64,14 +64,6 @@ function enter() {
     _87.play();
   }
 }
-window.addEventListener("keydown", _10 => {
-  _10.ctrlKey && (_10.key === "S" || _10.key === "s") && _10.preventDefault();
-  _10.ctrlKey && (_10.key === "C" || _10.key === "c") && _10.preventDefault();
-  _10.ctrlKey && (_10.key === "E" || _10.key === "e") && _10.preventDefault();
-  _10.ctrlKey && (_10.key === "I" || _10.key === "i" || _10.key === "Ã„Â±") && _10.preventDefault();
-  _10.ctrlKey && (_10.key === "K" || _10.key === "k") && _10.preventDefault();
-  _10.ctrlKey && (_10.key === "U" || _10.key === "u") && _10.preventDefault();
-});
 document.addEventListener("contextmenu", function (_283) {
   _283.preventDefault();
 });
