@@ -1,191 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta content="🔪" property="og:title">
-    <meta content="#000000" data-react-helmet="true" name="theme-color">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta content="@zyph" property="og:title">
+    <meta content="#FF0000" data-react-helmet="true" name="theme-color">
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=manrope@1&amp;display=swap"/>
-    <meta property="og:image" content="images/zyph.png">	
-    <link rel="icon" type="image/png" href="images/zyph.png">
-    <script src="main.js"></script>
-    <style>
-        .display,
-        body {
-            background-color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden;
-            justify-content: center;
-            align-items: center;
-            height: 102vh;
-            margin: 0;
-        }
-
-
-        .display {
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            transition: opacity 0.3s linear;
-        }
-
-        .enter {
-            font-family: Manrope;
-            font-size: 25px;
-            font-weight: 650;
-            color: white;
-            outline: none;
-            text-decoration: none;
-            transition: color 0.3s linear;
-        }
-
-        .enter:hover {
-            color: #6940a4;
-            transition: color 0.2s linear;
-            outline: none;
-            text-decoration: none;
-        }
-
-        .enter:focus {
-            outline: none
-        }
-
-        .center {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 110vh;
-        }
-
-        .fade-out {
-            opacity: 0;
-            transition: opacity .3s linear;
-        }
-
-        .discord-icon {
-            width: 27px;
-            height: 20px;
-            margin-top: 36px;
-            margin-left: 16px;
-            filter: drop-shadow(0 0 10px #6940a4);
-            transition: transform 0.3s linear;
-            overflow: hidden;
-            outline: none;
-            position: absolute;
-            cursor: pointer;
-        }
-
-        .discord-icon:hover {
-            transform: scale(1.2);
-            transition: transform .3s linear;
-            outline: none;
-            cursor: pointer;
-        }
-
-        .discord-icon:focus {
-            outline: none
-        }
-
-        .telegram-icon {
-            width: 27px;
-            height: 20px;
-            margin-top: 35px;
-            margin-right: 36px;
-            filter: drop-shadow(0 0 10px #6940a4);
-            transition: transform 0.3s linear;
-            outline: none;
-            position: relative;
-            left: -10px;
-            cursor: pointer;
-        }
-
-        .telegram-icon:hover {
-            transform: scale(1.2);
-            transition: transform .3s linear;
-            filter: drop-shadow(0 0 10px #6940a4);
-            outline: none;
-            cursor: pointer;
-        }
-
-        .telegram-icon:focus {
-            outline: none
-        }
-
-        .snowflake {
-            font-size: 1em;
-            text-shadow: 0 0 5px #6940a4;
-            outline: none;
-            opacity: 1;
-        }
-
-        .snowflake:focus {
-            outline: none
-        }
-
-        @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,linear;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,linear;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s} img[alt="www.000webhost.com"]{display:none}
-
-
-        * {
-            cursor: url(cdn/cursor_purple.png) 16 16, auto !important;
-        }
-
-
-
-    </style>
+    <title>@</title>
 </head>
 <body>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter:drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
-    <div class="snowflake">
-        <img src="cdn/crosspurple.png" style="filter: drop-shadow(0 0 8px #6940a4); width: 23px;height: 20px;">
-    </div>
+<style>
+    body {
+        background-color: black;
+        margin: 0;
+        height: 100px;
+        top: 50%;
+        overflow: hidden;
+        position: relative;
+        align-items: -webkit-center;
+        text-align: -webkit-center;
+    }
+
+    p {
+        color: white;
+        font-family: Manrope;
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 440px;
+        margin-left: 465px;
+        transition: color 0.2s linear;
+        position: fixed;
+    }
+
+    p:hover {
+        color: red;
+        transition: color 0.3s linear;
+    }
+
+    .watermark {
+        color: red;
+        display: flex;
+        font-family: Manrope;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 440px;
+        margin-left: 675px;
+        filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.7));
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+    }
+
+    .overlay {
+        background-color: black;
+        width: 100vh;
+        height: 100vh;
+        transition: opacity 0.3s ease-in-out;
+        align-items: -webkit-center;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .fade {
+        opacity: 0;
+        transition: opacity 0.3s linear;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+        margin-top: 235px;
+        margin-left: 150px;
+        border-radius: 50%;
+        pointer-events: none;
+        position: fixed;
+    }
+
+    .admin-badge {
+        width: 20px;
+        height: 20px;
+        margin-top: 375px;
+        margin-left: 186px;
+        filter: drop-shadow(0 0 10px rgba(96, 100, 244, 0.89));
+        pointer-events: none;
+        position: fixed;
+    }
+
+    .dev-badge {
+        width: 20px;
+        height: 20px;
+        margin-top: 375px;
+        margin-left: 217px;
+        filter: drop-shadow(0 0 10px rgba(48,172,100, 0.89));
+        pointer-events: none;
+        position: fixed;
+    }
+
+    .status {
+        margin-top: 415px;
+        pointer-events: none;
+    }
+
+    .telegram {
+        width: 28px;
+        height: 28px;
+        margin-left: -225px;
+        margin-top: 510px;
+        transition: transform 0.2s linear;
+        filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg) drop-shadow(0 0 15px rgba(255, 0, 0, 0.7));
+        position: fixed;
+        cursor: default;
+    }
+
+    .discord {
+        width: 29px;
+        height: 23px;
+        margin-left: -170px;
+        margin-top: 513px;
+        transition: transform 0.2s linear;
+        filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg) drop-shadow(0 0 15px rgba(255, 0, 0, 0.7));
+        position: fixed;
+        cursor: default;
+    }
+
+    .telegram:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s linear;
+        cursor: default;
+    }
+
+    .discord:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s linear;
+        cursor: default;
+    }
+
+    .snowflake {
+            font-size: 1em;
+            color: red;
+            text-shadow: 0 0 5px red;
+            pointer-events: none;
+            outline: none;
+        }
+
+        @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:ease-in-out,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:ease-in-out,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+
+
+    * {cursor: url(https://cur.cursors-4u.net/others/oth-8/oth704.cur), auto !important;}
+
+    ::selection{color:none;background:none;text-shadow:none} ::-moz-selection {color:none;background:none;text-shadow:none}
+</style>
+<div class="snowflakes"><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div>
 </div>
-<div class="display" id="display">
-    <div class="enter" id="enter" onclick="enter()">click</div>
+<div id="overlay" class="overlay">
+    <p onclick="enter()">click</p>
 </div>
-<script src="cdn/zyph.js"></script>
-<div class="center">
-    <img src="cdn/image.png">
-    <a href="https://discord.com/users/1159595801794859139" target="_blank">
-        <img src="cdn/discordpurple.png"
-             alt="Discord Icon" class="discord-icon">
-    </a>
+<script>
+    function enter() {
+        var overlay = document.getElementById("overlay");
+        overlay.classList.add("fade");
+        setTimeout(function() {overlay.style.display = "none";}, 300);
+        playing = false;
+            if (playing) {
+                return;
+            }
+        playing = true;
+        var stab = new Audio('https://zyph.nl/cdn/zyph.mp3');
+        stab.volume = 0.4;
+        stab.muted = false;
+        stab.loop = true;
+        stab.play();
+}
+
+    window.addEventListener("keydown", KeyboardEvent => {
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "S" || KeyboardEvent.key === "s")) {
+      KeyboardEvent.preventDefault();
+    }
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "C" || KeyboardEvent.key === "c")) {
+      KeyboardEvent.preventDefault();
+    }
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "E" || KeyboardEvent.key === "e")) {
+      KeyboardEvent.preventDefault();
+    }
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "I" || KeyboardEvent.key === "i" || KeyboardEvent.key === "\xC3\u201E\xC2\xB1")) {
+      KeyboardEvent.preventDefault();
+    }
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "K" || KeyboardEvent.key === "k")) {
+      KeyboardEvent.preventDefault();
+    }
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "U" || KeyboardEvent.key === "u")) {
+      KeyboardEvent.preventDefault();
+    }
+  });
+  document.addEventListener("contextmenu", function (MouseEvent) {
+  MouseEvent.preventDefault();
+});
+
+var xd = ["@zyph.nl", "@zypb", "@zyphv"];var time = 0;function UwU() {document.title = xd[time];time = (time + 1) % xd.length;}setInterval(UwU, 300);
+</script>
+    <img class="avatar" src="https://zyph.nl/images/zyph.png">
+    <img class="admin-badge" src="https://zyph.nl/cdn/admin.gif">
+    <img class="dev-badge" src="https://zyph.nl/cdn/dev.gif">
+    <img class="status" src="https://zyph.nl/cdn/1159595801794859139.png">
     <a href="https://instagram.com/zyphv" target="_blank">
-        <img src="cdn/telegrampurple.png"
-             alt="Telegram Icon" class="telegram-icon">
+        <img alt="Instagram" class="telegram" src="https://zyph.nl/cdn/tg-white.png">
     </a>
-</div>
+    <a href="https://discord.com/users/1159595801794859139" target="_blank">
+        <img alt="Discord" class="discord" src="https://zyph.nl/cdn/dsc-white.png">
+    </a>
+    <a href="https://zyph.nl" target="_blank"><div class="watermark">@zyph.nl</div></a>
 </body>
-</html>
