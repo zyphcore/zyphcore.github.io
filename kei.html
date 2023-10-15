@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta content="@kei my love" property="og:title">
+    <meta content="#FF0000" data-react-helmet="true" name="theme-color">
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=manrope@1&amp;display=swap"/>
+    <link rel="icon" type="image/x-icon" href="https://zyph.nl/images/kei.jpg">
+    <title>@</title>
+</head>
+<body>
+<style>
+    body {
+        background-color: black;
+        margin: 0;
+        height: 100px;
+        top: 50%;
+        overflow: hidden;
+        position: relative;
+        align-items: -webkit-center;
+        text-align: -webkit-center;
+    }
+
+    p {
+        color: white;
+        font-family: Manrope;
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 440px;
+        margin-left: 465px;
+        transition: color 0.2s linear;
+        position: fixed;
+    }
+
+    p:hover {
+        color: red;
+        transition: color 0.3s linear;
+    }
+
+    .watermark {
+        color: red;
+        display: flex;
+        font-family: Manrope;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 440px;
+        margin-left: 675px;
+        filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.7));
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+    }
+
+    .overlay {
+        background-color: black;
+        width: 100vh;
+        height: 100vh;
+        transition: opacity 0.3s ease-in-out;
+        align-items: -webkit-center;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .fade {
+        opacity: 0;
+        transition: opacity 0.3s linear;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+        margin-top: 235px;
+        margin-left: 150px;
+        border-radius: 50%;
+        pointer-events: none;
+        position: fixed;
+    }
+
+    .admin-badge {
+        width: 20px;
+        height: 20px;
+        margin-top: 375px;
+        margin-left: 186px;
+        filter: drop-shadow(0 0 10px rgba(96, 100, 244, 0.89));
+        pointer-events: none;
+        position: fixed;
+    }
+
+    .dev-badge {
+        width: 20px;
+        height: 20px;
+        margin-top: 375px;
+        margin-left: 217px;
+        filter: drop-shadow(0 0 10px rgba(48,172,100, 0.89));
+        pointer-events: none;
+        position: fixed;
+    }
+
+    .status {
+        margin-top: 415px;
+        pointer-events: none;
+    }
+
+    .telegram {
+        width: 28px;
+        height: 28px;
+        margin-left: -225px;
+        margin-top: 510px;
+        transition: transform 0.2s linear;
+        filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg) drop-shadow(0 0 15px rgba(255, 0, 0, 0.7));
+        position: fixed;
+        cursor: default;
+    }
+
+    .discord {
+        width: 29px;
+        height: 23px;
+        margin-left: -170px;
+        margin-top: 513px;
+        transition: transform 0.2s linear;
+        filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg) drop-shadow(0 0 15px rgba(255, 0, 0, 0.7));
+        position: fixed;
+        cursor: default;
+    }
+
+    .telegram:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s linear;
+        cursor: default;
+    }
+
+    .discord:hover {
+        transform: scale(1.2);
+        transition: transform 0.2s linear;
+        cursor: default;
+    }
+
+    .snowflake {
+            font-size: 1em;
+            color: red;
+            text-shadow: 0 0 5px red;
+            pointer-events: none;
+            outline: none;
+        }
+
+        @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:ease-in-out,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:ease-in-out,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+
+
+    * {cursor: url(https://cur.cursors-4u.net/games/gam-13/gam1210.ani), auto !important;}
+
+    ::selection{color:none;background:none;text-shadow:none} ::-moz-selection {color:none;background:none;text-shadow:none}
+</style>
+<div class="snowflakes"><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div><div class="snowflake">✝</div>
+</div>
+<div id="overlay" class="overlay">
+    <p onclick="enter()">[ kei ]</p>
+</div>
+<script>
+    function enter() {
+        var overlay = document.getElementById("overlay");
+        overlay.classList.add("fade");
+        setTimeout(function() {overlay.style.display = "none";}, 300);
+        playing = false;
+            if (playing) {
+                return;
+            }
+        playing = true;
+        var stab = new Audio('https://zyph.nl/images/kei.mp3');
+        stab.volume = 0.4;
+        stab.muted = false;
+        stab.loop = true;
+        stab.play();
+}
+
+    window.addEventListener("keydown", KeyboardEvent => {
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "S" || KeyboardEvent.key === "s")) {
+      KeyboardEvent.preventDefault();
+    }
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "C" || KeyboardEvent.key === "c")) {
+      KeyboardEvent.preventDefault();
+    }
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "E" || KeyboardEvent.key === "e")) {
+      KeyboardEvent.preventDefault();
+    }
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "I" || KeyboardEvent.key === "i" || KeyboardEvent.key === "\xC3\u201E\xC2\xB1")) {
+      KeyboardEvent.preventDefault();
+    }
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "K" || KeyboardEvent.key === "k")) {
+      KeyboardEvent.preventDefault();
+    }
+    if (KeyboardEvent.ctrlKey && (KeyboardEvent.key === "U" || KeyboardEvent.key === "u")) {
+      KeyboardEvent.preventDefault();
+    }
+  });
+  document.addEventListener("contextmenu", function (MouseEvent) {
+  MouseEvent.preventDefault();
+});
+
+var xd = ["@zyph.nl", "@kei ml<3", "@iloveyou"];var time = 0;function UwU() {document.title = xd[time];time = (time + 1) % xd.length;}setInterval(UwU, 300);
+</script>
+    <img class="avatar" src="https://zyph.nl/images/kei.jpg">
+    <img class="admin-badge" src="https://zyph.nl/cdn/admin.gif">
+    <img class="dev-badge" src="https://zyph.nl/cdn/dev.gif">
+    <img class="status" src="https://media.discordapp.net/attachments/1147935008087081031/1150465789011447950/healavatar_Xzc3KW.gif">
+    <a href="https://instagram.com/kitykek" target="_blank">
+        <img alt="Instagram" class="telegram" src="https://zyph.nl/cdn/tg-white.png">
+    </a>
+    <a href="https://discord.com/users/660312845858111501" target="_blank">
+        <img alt="Discord" class="discord" src="https://zyph.nl/cdn/dsc-white.png">
+    </a>
+    <a href="https://zyph.nl" target="_blank"><div class="watermark">@zyph.nl</div></a>
+</body>
