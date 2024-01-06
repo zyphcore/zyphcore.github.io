@@ -171,14 +171,14 @@
   }
   
   #toolbar .toolbar-icon.lookout {
-    background-image: url(Members/operator.png);
+    background-image: url(Members/ego.png);
     background-repeat: no-repeat;
     background-size: 24px 24px;
     z-index: 100 !important;
   }
   
   #toolbar .toolbar-icon.offguard {
-    background-image: url(Members/harmless.png);
+    background-image: url(Members/haz.png);
     background-repeat: no-repeat;
     background-size: 24px 24px;
     z-index: 100 !important;
