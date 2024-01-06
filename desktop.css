@@ -238,13 +238,13 @@
   }
   
   .desktop-icons .desktop-icon.operator {
-    background-image: url(Members/operator.png);
+    background-image: url(Members/ego.png);
     background-repeat: no-repeat;
     background-size: 48px 48px;
   }
   
   .desktop-icons .desktop-icon.harmless {
-    background-image: url(Members/harmless.png);
+    background-image: url(Members/haz.png);
     background-repeat: no-repeat;
     background-size: 48px 48px;
   }
