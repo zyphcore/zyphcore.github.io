@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
     var video = document.getElementById('background-video');
 
     proceedText.addEventListener('click', function() {
+        startWebsite();
+    });
+
+    function startWebsite() {
         var startScreen = document.getElementById('start-screen');
         var websiteContent = document.getElementById('website-content');
 
@@ -14,5 +18,5 @@ document.addEventListener("DOMContentLoaded", function() {
             audio.play();
             video.play();
         }
-    });
+    }
 });
