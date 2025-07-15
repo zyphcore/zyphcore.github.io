@@ -6,11 +6,64 @@
   <title>3DS File Uploader</title>
 </head>
 <body style="font-family: sans-serif; padding: 20px;">
-  <h1>Upload your 3DS file</h1>
-  <form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" required />
+  <h1>Upload your 3DS files</h1>
+  <form id="uploadForm">
+    <input type="file" name="files" id="fileInput" multiple required />
     <br/><br/>
     <button type="submit">Upload</button>
   </form>
+
+  <br/>
+  <progress id="progressBar" value="0" max="100" style="width: 100%; display: none;"></progress>
+  <p id="statusText"></p>
+
+  <script>
+    const form = document.getElementById('uploadForm');
+    const progressBar = document.getElementById('progressBar');
+    const statusText = document.getElementById('statusText');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const files = document.getElementById('fileInput').files;
+      if (files.length === 0) return;
+
+      const formData = new FormData();
+      for (let file of files) {
+        formData.append('files', file);
+      }
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', '/upload', true);
+
+      xhr.upload.onprogress = function (e) {
+        if (e.lengthComputable) {
+          const percent = Math.round((e.loaded / e.total) * 100);
+          progressBar.value = percent;
+          statusText.textContent = `Uploading... ${percent}%`;
+        }
+      };
+
+      xhr.onloadstart = function () {
+        progressBar.style.display = 'block';
+        progressBar.value = 0;
+        statusText.textContent = 'Starting upload...';
+      };
+
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          statusText.textContent = 'Upload complete!';
+        } else {
+          statusText.textContent = 'Upload failed: ' + xhr.responseText;
+        }
+      };
+
+      xhr.onerror = function () {
+        statusText.textContent = 'Upload error.';
+      };
+
+      xhr.send(formData);
+    });
+  </script>
 </body>
 </html>
