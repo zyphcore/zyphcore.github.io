@@ -1,68 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>3DS File Uploader</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f1f1f8;
+      color: #333;
+    }
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; padding: 20px;">
-  <h1>Upload your 3DS files</h1>
-  <form id="uploadForm">
-    <input type="file" name="files" id="fileInput" multiple required />
+<body>
+  <h1>Upload je 3DS bestand</h1>
+  <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="files" required />
     <br/><br/>
     <button type="submit">Upload</button>
   </form>
-
-  <br/>
-  <progress id="progressBar" value="0" max="100" style="width: 100%; display: none;"></progress>
-  <p id="statusText"></p>
+  <p id="status"></p>
 
   <script>
     const form = document.getElementById('uploadForm');
-    const progressBar = document.getElementById('progressBar');
-    const statusText = document.getElementById('statusText');
+    const status = document.getElementById('status');
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const files = document.getElementById('fileInput').files;
-      if (files.length === 0) return;
-
-      const formData = new FormData();
-      for (let file of files) {
-        formData.append('files', file);
-      }
-
-      const xhr = new XMLHttpRequest();
-      xhr.open('POST', '/upload', true);
-
-      xhr.upload.onprogress = function (e) {
-        if (e.lengthComputable) {
-          const percent = Math.round((e.loaded / e.total) * 100);
-          progressBar.value = percent;
-          statusText.textContent = `Uploading... ${percent}%`;
-        }
-      };
-
-      xhr.onloadstart = function () {
-        progressBar.style.display = 'block';
-        progressBar.value = 0;
-        statusText.textContent = 'Starting upload...';
-      };
-
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          statusText.textContent = 'Upload complete!';
-        } else {
-          statusText.textContent = 'Upload failed: ' + xhr.responseText;
-        }
-      };
-
-      xhr.onerror = function () {
-        statusText.textContent = 'Upload error.';
-      };
-
-      xhr.send(formData);
+    form.addEventListener('submit', function(e) {
+      status.textContent = 'Upload bezig, even geduld...';
     });
   </script>
 </body>
