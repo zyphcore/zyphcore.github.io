@@ -11,25 +11,24 @@ const upload = multer({ dest: 'uploads/' });
 
 app.use(express.static('.'));
 
-app.post('/upload', upload.array('files'), async (req, res) => {
-  if (!req.files || req.files.length === 0) return res.status(400).send('No files uploaded.');
+app.post('/upload', upload.single('files'), async (req, res) => {
+  if (!req.file) return res.status(400).send('No file uploaded.');
 
   const webhookUrl = process.env.WEBHOOK_URL;
 
   try {
-    for (const file of req.files) {
-      const filePath = path.join(__dirname, file.path);
-      const formData = new FormData();
-      formData.append('file', fs.createReadStream(filePath), file.originalname);
+    const file = req.file;
+    const filePath = path.join(__dirname, file.path);
+    const formData = new FormData();
+    formData.append('file', fs.createReadStream(filePath), file.originalname);
 
-      await axios.post(webhookUrl, formData, {
-        headers: formData.getHeaders()
-      });
+    await axios.post(webhookUrl, formData, {
+      headers: formData.getHeaders()
+    });
 
-      fs.unlink(filePath, () => {}); // Delete file after upload
-    }
+    fs.unlink(filePath, () => {}); // Delete file after upload
 
-    res.send('All files uploaded and sent to Discord!');
+    res.send('File uploaded and sent to Discord!');
   } catch (error) {
     res.status(500).send('Error sending to Discord: ' + error.message);
   }
