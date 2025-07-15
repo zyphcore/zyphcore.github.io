@@ -14,7 +14,7 @@ app.use(express.static('.'));
 app.post('/upload', upload.array('files'), async (req, res) => {
   if (!req.files || req.files.length === 0) return res.status(400).send('No files uploaded.');
 
-  const webhookUrl = config.webhook_url;
+  const webhookUrl = process.env.WEBHOOK_URL;
 
   try {
     for (const file of req.files) {
@@ -35,6 +35,5 @@ app.post('/upload', upload.array('files'), async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("Listening on port", PORT));
