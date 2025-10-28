@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --glass: rgba(255,255,255,0.04);
+}
+
+html,body,#root{height:100%;}
+
+/* small helpers */
+.scrollbar-hide::-webkit-scrollbar{display:none}
